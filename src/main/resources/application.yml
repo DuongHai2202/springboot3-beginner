@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: springboot3_beginner
+  datasource:
+    url: jdbc:mysql://localhost:3307/springboot3_beginner
+    username: root
+    password: 12345678
