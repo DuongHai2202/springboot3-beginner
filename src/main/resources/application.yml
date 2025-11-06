@@ -7,3 +7,19 @@ spring:
     url: jdbc:mysql://localhost:3307/springboot3_beginner
     username: root
     password: 12345678
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+openapi:
+  service:
+    api-docs: api-service
+    serverUrl: http://localhost:${server.port}
+    serverName: Server Dev
+    title: API Document
+    version: 1.0.0
