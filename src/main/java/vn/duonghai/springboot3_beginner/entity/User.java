@@ -12,12 +12,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "tbl_user")
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "tbl_user")
 public class User extends AbstractEntity {
 
     @Column(name = "first_name")
