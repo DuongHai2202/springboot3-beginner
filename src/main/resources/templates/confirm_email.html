@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>Thông báo từ hệ thống</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body style="margin:0;padding:0;background-color:#f3f4f6;">
+<!-- Background wrapper -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0"
+       style="width:100%;background-color:#f3f4f6;padding:32px 12px;" align="center">
+    <tr>
+        <td align="center">
+            <!-- Main container (max 600px) -->
+            <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                   style="width:100%;max-width:600px;background-color:#ffffff;
+                          border-radius:16px;overflow:hidden;
+                          box-shadow:0 14px 30px rgba(15,23,42,0.12);"
+                   align="center">
+                <!-- Top accent bar -->
+                <tr>
+                    <td style="height:4px;background:linear-gradient(90deg,#2563eb,#4f46e5,#06b6d4);font-size:0;line-height:0;">
+                        &nbsp;
+                    </td>
+                </tr>
+
+                <!-- Header: logo + app name -->
+                <tr>
+                    <td style="padding:20px 32px 10px 32px;
+                               font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td align="left" style="vertical-align:middle;">
+                                    <!-- Logo giả, bạn thay bằng <img> thật -->
+                                    <table cellpadding="0" cellspacing="0" border="0"
+                                           style="border-radius:999px;background-color:#eef2ff;">
+                                        <tr>
+                                            <td style="padding:10px 14px;font-size:14px;
+                                                       font-weight:700;color:#4f46e5;
+                                                       font-family:inherit;">
+                                                Company Name
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td align="right" style="vertical-align:middle;">
+                                    <span style="font-size:13px;color:#6b7280;font-weight:500;">
+                                        Hai Java
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Title + intro -->
+                <tr>
+                    <td style="padding:0 32px 12px 32px;
+                               font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+                        <h1 style="margin:0 0 6px 0;font-size:20px;line-height:1.3;
+                                   color:#0f172a;font-weight:650;">
+                            Email Authentication
+                        </h1>
+                        <p style="margin:0;font-size:14px;line-height:1.6;color:#6b7280;">
+                            Xin chào <strong style="color:#111827;">{{name}}</strong>,<br />
+                            Đây là thông báo từ hệ thống của chúng tôi. Vui lòng xem chi tiết bên dưới.
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- Divider -->
+                <tr>
+                    <td style="padding:4px 32px 0 32px;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td style="border-bottom:1px solid #e5e7eb;font-size:0;line-height:0;">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- Main content block -->
+                <tr>
+                    <td style="padding:16px 32px 8px 32px;
+                               font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+                        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                               style="width:100%;background-color:#f9fafb;border-radius:12px;
+                                      border:1px solid #e5e7eb;">
+                            <tr>
+                                <td style="padding:16px 18px;">
+                                    <!-- Info rows -->
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                        <!-- Ví dụ dòng thông tin -->
+                                        <tr>
+                                            <td style="padding-bottom:8px;font-size:12px;
+                                                       text-transform:uppercase;letter-spacing:0.05em;
+                                                       color:#9ca3af;font-weight:600;">
+                                                Secret Code:
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;line-height:1.65;color:#374151;">
+                                                {{content}}
+                                            </td>
+                                        </tr>
+
+                                        <!-- Optional extra info -->
+<!--                                        <tr>-->
+<!--                                            <td style="padding-top:14px;font-size:13px;line-height:1.6;color:#6b7280;">-->
+<!--                                                Mã tham chiếu:-->
+<!--                                                <span style="font-weight:600;color:#111827;">-->
+<!--                                                    {{reference_code}}-->
+<!--                                                </span><br />-->
+<!--                                                Thời gian tạo:-->
+<!--                                                <span style="color:#111827;">-->
+<!--                                                    {{created_at}}-->
+<!--                                                </span>-->
+<!--                                            </td>-->
+<!--                                        </tr>-->
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- CTA section -->
+                <tr>
+                    <td style="padding:10px 32px 22px 32px;
+                               font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+                               text-align:center;">
+                        <table cellpadding="0" cellspacing="0" border="0" align="center">
+                            <tr>
+                                <td align="center"
+                                    style="border-radius:999px;background-color:#2563eb;">
+                                    <a th:href="${linkConfirm}"
+                                       style="display:inline-block;padding:11px 26px;
+                                              font-size:14px;font-weight:600;
+                                              text-decoration:none;color:#ffffff;
+                                              border-radius:999px;
+                                              font-family:inherit;">
+                                        Submit
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <p style="margin:12px 0 0 0;font-size:11px;line-height:1.7;color:#9ca3af;">
+                            Nếu bạn không thực hiện yêu cầu này, có thể bỏ qua email.<br />
+                            Nếu nút không hoạt động, hãy truy cập đường dẫn sau:<br />
+                            <span style="word-break:break-all;color:#2563eb;">
+                                {{action_url}}
+                            </span>
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="padding:14px 32px 18px 32px;
+                               border-top:1px solid #e5e7eb;
+                               font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+                               font-size:11px;line-height:1.7;color:#9ca3af;text-align:left;">
+                        <p style="margin:0 0 4px 0;">
+                            Bạn nhận được email này vì địa chỉ <span style="color:#4b5563;">duongvanhai2202@gmail.com</span>
+                            được đăng ký trong hệ thống <strong style="color:#4b5563;">Company Name</strong>.
+                        </p>
+                        <p style="margin:0;">
+                            &copy; 2025 Company Name. Tất cả các quyền được bảo lưu.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <!-- /Main container -->
+        </td>
+    </tr>
+</table>
+</body>
+</html>

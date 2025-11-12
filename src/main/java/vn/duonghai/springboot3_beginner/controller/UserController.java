@@ -20,6 +20,7 @@ import vn.duonghai.springboot3_beginner.util.UserStatus;
 @Slf4j
 @RequiredArgsConstructor
 public class UserController {
+
     private final UserService userService;
 
     private static final String ERROR_MESSAGE = "errorMessage={}";

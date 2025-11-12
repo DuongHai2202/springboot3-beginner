@@ -46,8 +46,20 @@ public class UserServiceImpl implements UserService {
                 .gender(request.getGender())
                 .status(request.getStatus())
                 .type(UserType.valueOf(request.getType().toUpperCase()))
-                .addresses(convertToAddress(request.getAddresses()))
+//                .addresses(convertToAddress(request.getAddresses()))
                 .build();
+        request.getAddresses().forEach(a ->
+                user.saveAddress(Address.builder()
+                        .apartmentNumber(a.getApartmentNumber())
+                        .floor(a.getFloor())
+                        .building(a.getBuilding())
+                        .streetNumber(a.getStreetNumber())
+                        .street(a.getStreet())
+                        .city(a.getCity())
+                        .country(a.getCountry())
+                        .addressType(a.getAddressType())
+                        .build()));
+
         userRepository.save(user);
 
         log.info("User had added successfully userId={}", user.getId());
